@@ -1,0 +1,26 @@
+player.on(Player.Event.StateChanged, (state: Player.State) => {
+  switch (state) {
+    case Player.State.Buffering:
+      /**
+       * The player is buffering content.
+       */
+    case Player.State.Ended:
+      /**
+       * The stream has ended.
+       */
+    case Player.State.Idle:
+      /**
+       * The player has successfully authenticated and is loading the stream. This
+       * state is also reached as a result of calling player.pause().
+       */
+    case Player.State.Playing:
+      /**
+       * The player is now playing a stream. This state occurs as a result of calling
+       * player.play().
+       */
+    case Player.State.Ready:
+      /**
+       * The player is ready to play back the stream.
+       */
+  }
+});
